@@ -37,12 +37,12 @@ const Login = (props) => {
   return (
     <Container fluid>
       <Row className="justify-content-md-center">
+        <div className='instructionTxt'>
+          <h3>Bienvenido</h3>
+          <span>Por favor digita: email@mail.com</span><br />
+          <span>Por favor digita: password</span>
+        </div>
         <Col xs lg="2">
-          <div className='instructionTxt'>
-            <h3>Bienvenido</h3>
-            <span>Por favor digita: email@mail.com</span><br />
-            <span>Por favor digita: password</span>
-          </div>
           <section className='loginCard'>
             <div className="card">
               <h4 className="title">Log In!</h4>
