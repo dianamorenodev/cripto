@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+// Import components
+import Login from './components/login';
+import Menu from './components/menu';
+import Cripto from './components/cripto'
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
-
+import React from 'react';
+import { useState } from 'react';
 function App() {
+  const [token, setToken] = useState(false)
+  function addToken(n) {
+    setToken(n);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menu />
+      <Login />
+      <Routes>
+        <Route path='/' element={<Login addToken={addToken} />} />
+        <Route path='/cripto' element={<Cripto token={token} />} />
+      </Routes>
     </div>
   );
 }
