@@ -36,6 +36,9 @@ function Cripto(props) {
                     <h5 className="card-title">{cripto.name}</h5>
                     <p className="card-text">Rank: {cripto.rank}</p>
                     <p className='card-text'>Usd: {cripto.price_usd}</p>
+                    <p className='card-text'>Cambios en 24 horas: {cripto.percent_change_24h}</p>
+                    <p className='card-text'>Cambios en 1 hora: {cripto.percent_change_1h}</p>
+                    <p className='card-text'>Cambios en 7 dias: {cripto.percent_change_7d}</p>
                   </div>
                 </div>
               </div>
