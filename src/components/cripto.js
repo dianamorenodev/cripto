@@ -22,7 +22,7 @@ function Cripto(props) {
   }, [setCriptoList]);
 
   return (
-    <Container>
+    <Container fluid>
       <Row className="justify-content-md-center">
         <center><h1>Ranking de cripto monedas</h1></center>
         {!token && <Navigate to='/' />}

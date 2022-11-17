@@ -6,17 +6,14 @@
   color: #ffffff;
 }
 
-.loginCard {
-  margin: 5rem;
-  max-width: 100vh;
-  text-align: center;
+.instructionTxt {
+  margin: 3rem;
 }
 
-.card {
-  width: 190px;
-  padding: 1.9rem 1.2rem;
+.loginCard {
+  margin: 3rem;
+  max-width: 100vh;
   text-align: center;
-  background: #0C112C;
 }
 
 /*Inputs*/
@@ -94,10 +91,13 @@
 /* componente listado */
 
 .card {
-  background-color: #242132;
+  background-color: #0C112C;
   border: solid #746cfe;
   margin-bottom: 5%;
   margin-top: 5%;
+  width: 200px;
+  padding: 1.9rem 1.2rem;
+  text-align: center;
 }
 
 .card:hover {
