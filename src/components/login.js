@@ -42,7 +42,7 @@ const Login = (props) => {
           <span>Por favor digita: email@mail.com</span><br />
           <span>Por favor digita: password</span>
         </div>
-        <Col xs lg="2">
+        <Col xs lg="2" className='justify-content-center'>
           <section className='loginCard'>
             <div className="card">
               <h4 className="title">Log In!</h4>

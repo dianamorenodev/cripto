@@ -2,6 +2,8 @@
 import Login from './components/login';
 import Menu from './components/menu';
 import Cripto from './components/cripto'
+import Footer from './components/footer';
+// Import libraries
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import React from 'react';
@@ -18,6 +20,7 @@ function App() {
         <Route path='/' element={<Login addToken={addToken} />} />
         <Route path='/cripto' element={<Cripto token={token} />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

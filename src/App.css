@@ -7,7 +7,7 @@
 }
 
 .instructionTxt {
-  margin-top: 2rem;
+  margin-top: 3rem;
   text-align: center;
 }
 
@@ -96,19 +96,29 @@
   border: solid #746cfe;
   margin-bottom: 5%;
   margin-top: 5%;
-  width: 200px;
+  width: 230px;
   padding: 1.9rem 1.2rem;
   text-align: center;
 }
 
 .card:hover {
+  border-radius: 0px 20px 0px 20px;
   box-shadow: 0px 0px 30px 1px #ae8cfa;
   transform: scale(0.98);
   border: solid #ae8cfa;
+}
+
+.criptoCard {
+  width: 250px;
 }
 
 .form-input {
   background-color: #242132;
   border: solid #746cfe;
   color: #F8F9FA;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 5rem;
 }

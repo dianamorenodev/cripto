@@ -16,7 +16,7 @@ const Menu = () => {
               height="30"
               className="d-inline-block align-top"
             />{''}
-            React Bootstrap
+            Cripto
           </Navbar.Brand>
         </Container>
       </Navbar>

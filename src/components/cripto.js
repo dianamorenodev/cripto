@@ -25,15 +25,15 @@ function Cripto(props) {
   return (
     <Container fluid>
       <Row className="justify-content-center mx-auto">
-        <center><h1>Ranking de cripto monedas</h1></center>
+        <center><h3>Ranking de cripto monedas</h3></center>
         {!token && <Navigate to='/' />}
         {
           criptoList.map((cripto) => {
             return (
               <div className='col-lg-3 col-md-4 col-sm-6 col-xs-12 my-4 d-flex flex-col justify-content-center' key={cripto.id}>
-                <div className="card " >
+                <div className="card criptoCard" >
                   <div className="card-body">
-                    <h5 className="card-title">{cripto.name}</h5>
+                    <h5 className="card-title">{cripto.symbol} {cripto.name}</h5>
                     <p className="card-text">Rank: {cripto.rank}</p>
                     <p className='card-text'>Usd: {cripto.price_usd}</p>
                     <p className='card-text'>Cambios en 24 horas: {cripto.percent_change_24h}</p>
