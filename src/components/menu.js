@@ -8,7 +8,7 @@ const Menu = () => {
     <>
       <Navbar>
         <Container>
-          <Navbar.Brand href="#home" className='navText'>
+          <Navbar.Brand className='navText'>
             <img
               alt=""
               src={logo}
