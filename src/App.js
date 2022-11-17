@@ -14,7 +14,6 @@ function App() {
   return (
     <div className="App">
       <Menu />
-      <Login />
       <Routes>
         <Route path='/' element={<Login addToken={addToken} />} />
         <Route path='/cripto' element={<Cripto token={token} />} />

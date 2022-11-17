@@ -1,55 +1,48 @@
-import { Navigate, Link } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import React from 'react';
 import axios from 'axios';
-import swAlert from 'sweetalert';
-
+import { Container, Row, Col } from 'react-bootstrap';
 
 function Cripto(props) {
   let token = props.token
 
-  const [moviesList, setMoviesList] = useState([])
+  const [criptoList, setCriptoList] = useState([])
 
   useEffect(() => {
     const endPoint = 'https://api.coinlore.net/api/tickers/'
     axios.get(endPoint)
       .then(res => {
         const apiData = res.data
-        setMoviesList(apiData.results)
+        setCriptoList(apiData.results)
       })
       .catch(error => {
-        swAlert(
-          <h2>Hubo errores, intenta más tarde</h2>
-        )
+        alert("Hubo errores, intenta más tarde")
       })
-  }, [setMoviesList]);
+  }, [setCriptoList]);
 
   return (
-    <div className='container mt-4'>
-      {!token && <Navigate to='/' />}
-      <center><h1>Peliculas Recientes</h1></center>
-      <div className='row'>
-
+    <Container>
+      <Row className="justify-content-md-center">
+        <center><h1>Ranking de cripto monedas</h1></center>
+        {!token && <Navigate to='/' />}
         {
-          moviesList.map((movies) => {
+          criptoList.map((cripto) => {
             return (
-              <div className='col-lg-3 col-md-4 col-sm-6 col-xs-12 my-4' key={movies.id}>
+              <div className='col-lg-3 col-md-4 col-sm-6 col-xs-12 my-4' key={cripto.id}>
                 <div className="card " >
-                  <img className="card-img-top" src={'https://image.tmdb.org/t/p/w500' + movies.poster_path} alt="Card cap" />
-                  <button onClick={props.addOrRemoveFromFavs} data-movie-id={movies.id} className='favourite-btn'>🖤</button>
+                  <img className="card-img-top" src={cripto.symbol} alt="Card cap" />
                   <div className="card-body">
-                    <h5 className="card-title">{movies.title.substring(0, 30)
-                    }...</h5>
-                    <p className="card-text">{movies.overview.substring(0, 100)}...</p>
-                    <Link to={`/detalle?movieID=${movies.id}`} className="btn btn-primary">Ver detalle</Link>
+                    <h5 className="card-title">{cripto.name}</h5>
+                    <p className="card-text">{cripto.rank}</p>
                   </div>
                 </div>
               </div>
             )
           })
         }
-      </div>
-    </div>
+      </Row>
+    </Container>
   )
 }
 
