@@ -1,8 +1,8 @@
 // Import components
-import Login from './components/login';
-import Menu from './components/menu';
-import Cripto from './components/cripto'
-import Footer from './components/footer';
+import Login from './components/login.jsx';
+import Menu from './components/menu.jsx';
+import Cripto from './components/cripto.jsx'
+import Footer from './components/footer.jsx';
 // Import libraries
 import { Routes, Route } from 'react-router-dom';
 import './App.css';

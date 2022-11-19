@@ -4,7 +4,7 @@ import icon from '../img/icon.png'
 
 const Footer = () => {
   return (
-    <Container fluids className='footer'>
+    <Container fluid className='footer'>
       <Row>
         <Col>
           <img src={icon} />
